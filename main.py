@@ -1,6 +1,20 @@
 from tkinter import *
+import pandas
+import random
 
 BACKGROUND_COLOR = "#B1DDC6"
+
+# import data
+data = pandas.read_csv("data/french_words.csv")
+learn_this = data.to_dict(orient="records")
+
+
+def next_card():
+    current_card = random.choice(learn_this)
+    print(current_card["French"])
+    # flashcard.itemconfig(flash_title, text="French")
+    # flashcard.itemconfig(flash_word, text=current_card["French"])
+
 
 # initialize module and set up the ui window
 window = Tk()
