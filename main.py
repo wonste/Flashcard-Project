@@ -35,12 +35,12 @@ canvas.grid(row=0, column=0, columnspan=2)
 
 # buttons
 cross = PhotoImage(file="images/wrong.png")
-error_button = Button(image=cross, highlightthickness=0)
-error_button.grid(row=1, column=0)
+unknown_button = Button(image=cross, highlightthickness=0, command=next_card)
+unknown_button.grid(row=1, column=0)
 
 check = PhotoImage(file="images/right.png")
-yes_button = Button(image=check, highlightthickness=0)
-yes_button.grid(row=1, column=1)
+known_button = Button(image=check, highlightthickness=0, command=next_card)
+known_button.grid(row=1, column=1)
 
 next_card()
 
